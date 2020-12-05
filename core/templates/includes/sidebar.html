@@ -1,0 +1,56 @@
+
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menupos-fixed menu-light ">
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div " >
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+						<label>Navegación</label>
+					</li>
+					<li class="nav-item">
+					    <a href="{%url 'inventario:inventarioLista'%}" id="Inventario" class="nav-link {% if 'index' in segment %} active {% endif %}">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-inbox"></i></span><span class="pcoded-mtext">
+									Inventario</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="/" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file"></i></span><span class="pcoded-mtext">
+									Reportes</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="{% url 'empleados:listaEmpleados' %}" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="fa fa-user"></i></span><span class="pcoded-mtext">
+									Empleados </span></a>
+								
+					</li>
+					
+					<li class="nav-item">
+					    <a href="{% url 'empleados:listaAreas' %}" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="fas fa-briefcase"></i></span><span class="pcoded-mtext">
+									Areas </span></a>
+								
+					</li>				
+					<li class="nav-item">
+					    <a href="{% url 'inventario:ListaProductos' %}" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="fa fa-archive"></i></span><span class="pcoded-mtext">
+									Productos</span></a>
+								
+					</li>
+					<li class="nav-item">
+					    <a href="{% url 'inventario:Partidas_lista' %}" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="fas fa-layer-group"></i></span><span class="pcoded-mtext">
+									Partidas</span></a>
+
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!-- [ navigation menu ] end -->

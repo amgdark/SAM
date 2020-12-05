@@ -1,0 +1,48 @@
+{% extends 'layouts/base.html' %}
+
+{% block titulo %}
+    Agragando un Producto
+{% endblock titulo %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-2"></div> 
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">
+                    {% if editar %}
+                        Sacar del Inventario
+                    {% else %}
+                        Añadir al Inventario
+                    {% endif %}
+                </h3>
+            </div>
+                <form method="post">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </div>
+                    <div class="card-footer">
+                        <input type="submit" id="Agregar" class="btn btn-success" value="{% if editar %}Guardar cambios{% else %}Agregar{% endif %}">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-2"></div> 
+
+
+    <script>
+        $(function() {
+          $( ".datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:2012",
+            // You can put more options here.
+   
+          });
+        });
+        </script>
+{% endblock content %}
+
